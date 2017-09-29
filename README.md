@@ -1,5 +1,5 @@
 # notion
-Write and keep Good idea.
+Write and keep Good notions.
 #### This is just for Gnu/Linux
 if you want write and keep the nation(s) and public them later you can use this.
 this script keep subtitle, content and taller of your nations.
