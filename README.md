@@ -7,7 +7,7 @@ this script keep subtitle, content and taller of your notions.
 this script doing:
   1. Show all or some of your written notion(s) of default or arbitrary file.
   2. Write new notions at default or arbitrary file.
-  3. Deleteall or some of your written notion(s) of default or arbitrary file.
+  3. Delete all or some of your written notion(s) of default or arbitrary file.
 ## How to use:
   first you must clone this repository:
   ```
