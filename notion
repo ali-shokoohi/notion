@@ -1,0 +1,116 @@
+#!/usr/bin/python3
+try:
+    ufile = open("/tmp/.UsernAme",'r')
+    user = ufile.readline()
+    user = user[:-1]
+    repeat = True
+
+    print("""Hello!
+
+        That is a place for keep your notions or thoughts.
+        """)
+
+    input("Let's go")
+except:
+    print("Please first run 'installer.sh' or run 'installer.sh' again!\nOr you can create '/tmp/.UsernAme' and type your username on '/tmp/.UsernAme'\nBecause file '/tmp/.UsernAme' not found!")
+    repeat = False
+while repeat:
+    do = input('What am I doing ? "Write new notion -Show old notion -Delete old notion(s)": ')
+    if not do:
+        print("What! Nothing?!")
+        while not do :
+            do = str(input("Tell me what I must do 'Write new notion -Show old notion(s) -Delete old notion(s)': "))
+            if not do:
+                print("What are you thing about me!? Look enter a word that you want i do it 'Write new notion -Show old notion -Delete old notion(s)'.")
+    if do == 'sh' or do == 'show' or do == 'Sh' or do == 'Show' or do == 'Show old notion' or do == 'Show old notions':
+        Rname = input('Please enter the name of file notions (Default = "/home/'+user+'/.things/notions.txt" ==> Just press enter!) : ')
+        if not Rname:
+            Rname = '/home/'+user+'/.things/notions.txt'
+        try:
+            Rlist = open(Rname,'r')
+        except:
+            print("Can't open '"+Rname+"':No such file or directory!\nNow i open the default file('/home/"+user+"/.things/notions.txt')")
+            Rlist = open('/home/'+user+'/.things/notions.txt','r')
+        Rnotions = Rlist.readlines()
+        subtitle = input("Enter a subtitle of your old notion that you want see it, Or type All for show all of your notions : ")
+        if not subtitle:
+            print("Oh no! You must enter your subtitle of old notion for see content of it.")
+            while not subtitle :
+                subtitle = str(input("Again enter your subtitle of notion : "))
+                if not subtitle:
+                    print("Oh dear! Subtitle of your old notion is necessary.")
+        print("Your notions:")
+        for notion in Rnotions:
+            if subtitle == 'all' or subtitle == 'All':
+                print(notion)
+            else:
+                if notion[:len(subtitle)] == subtitle:
+                    print(notion[len(subtitle)+4:])
+        Rlist.close()
+    elif do == 'w' or do == 'write' or do == 'W' or do == 'Write':
+        Wname = input('Please enter the name of file that you want write on that (Default = "/home/'+user+'/.things/notions.txt" ==> just press enter!) : ')
+        if not Wname:
+            Wname = '/home/'+user+'/.things/notions.txt'
+        subtitle = str(input("Please enter subtitle of your notion : "))
+        if not subtitle:
+            print("Oh no! You must enter your subtitle of notion for assortment of notions.")
+            while not subtitle :
+                subtitle = str(input("Again enter your subtitle of notion : "))
+                if not subtitle:
+                    print("Oh dear! Subtitle of your notion is necessary.")
+        content = str(input("Good. Now enter content of your notion : \n\n"))
+        if not content:
+            print("Oh no! You must enter your content of notion for to see notions.")
+            while not content :
+                content = str(input("Again enter your content of notion : "))
+                if not content:
+                    print("Oh! Content of your notion is necessary.")
+        from_p = input("Who is this talk? (That person say it 'at first') : ")
+        if not author:
+            author = 'None'
+        try:
+            Wlist = open(Wname,'a')
+        except:
+            print("Can't access '"+Rname+"':No such file or directory!\nNow i open the default file('/home/"+user+"/.things/notions.txt')")
+            Wlist = open('/home/'+user+'/.things/notions.txt','a')
+        Wlist.write(subtitle+" ==> "+content+' ('+from_p+')\n')
+        Wlist.close()
+    elif do == 'del' or do == 'delete' or do == "Del" or do == "Delete":
+        Dname = input('Please enter the name of file notions (Default = "notions.txt" ==> Just press enter!) : ')
+        if not Dname:
+            Dname = '/home/'+user+'/.things/notions.txt'
+        try:
+            Rlist = open(Dname,'r')
+        except:
+            print("Can't found '"+Dname+"':No such file or directory!\nNow i open the default file('/home/"+user+"/.things/notions.txt')")
+            Rlist = open('/home/'+user+'/.things/notions.txt','r')
+        Rnotions = Rlist.readlines()
+        Dlist = open(Dname,'w')            
+        subtitle = input("Enter a subtitle of your old notion that you want delete it, Or type All for delete all of your notions : ")
+        if not subtitle:
+            print("Oh no! You must enter your subtitle of old notion for delete it.")
+            while not subtitle :
+                subtitle = str(input("Again enter your subtitle of notion : "))
+                if not subtitle:
+                    print("Oh dear! Subtitle of your old notion is necessary.")
+        for notion in Rnotions:
+            if notion[:len(subtitle)] == subtitle or subtitle == 'all' or subtitle == 'All':
+                surdel = input("The notion was found:\n"+notion+"\nAre you sure DELETE this notion? Undo not able (yes|No): ")
+                if surdel == 'yes' or surdel == 'Yes':
+                    print("Deleted!")
+                    continue 
+                else:
+                    print("Ok! Did Not deleted")
+            Dlist.write(notion)
+        Rlist.close()
+        Dlist.close()
+    print("End!")
+    repeat = input("Do you want repeat this? (Yes|No) ")
+    if repeat == 'No' or repeat == 'no':
+        print("Ok,Bye!")
+        repeat = False
+    elif repeat == 'Yes' or repeat == 'yes' or repeat == '':
+        repeat = True
+    else:
+        print("Oh sorry! I don't know that you say :( ")
+#https://github.com/ali-shokoohi/notion/
