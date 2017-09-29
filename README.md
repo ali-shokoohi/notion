@@ -10,13 +10,23 @@ this script doing:
   3. Deleteall or some of your written nation(s) of default or arbitrary file.
 ## How to use:
   first you must clone this repository:
-    `git clone https://github.com/ali-shokoohi/notion.git`
+  ```
+  git clone https://github.com/ali-shokoohi/notion.git
+  ```
   then Enter the directory:
-    `cd notion/`
+  ```
+  cd notion/
+  ```
   and you can see the content of my repository whit `ls`
   now i creat a script 'installer.sh' for do somethings , you can view this file and run it:
-    `cat installer.sh #For see content of script`
-    `chmod +x installer.sh #For runable this script`
-    `./installer.sh #For run script `
+  ```
+  cat installer.sh #For see content of script
+  ```
+  ```
+  chmod +x installer.sh #For runable this script
+  ```
+  ```
+  ./installer.sh #For run script 
+  ```
 At the moment this script have several small bugs!
 ### Please help me to development this script :)
