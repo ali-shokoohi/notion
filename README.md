@@ -1,13 +1,13 @@
 # notion
 Write and keep Good notions.
 #### This is just for Gnu/Linux
-if you want write and keep the nation(s) and public them later you can use this.
-this script keep subtitle, content and taller of your nations.
+if you want write and keep the notion(s) and public them later you can use this.
+this script keep subtitle, content and taller of your notions.
 ##### Show, Write, Delete
 this script doing:
-  1. Show all or some of your written nation(s) of default or arbitrary file.
-  2. Write new nations at default or arbitrary file.
-  3. Deleteall or some of your written nation(s) of default or arbitrary file.
+  1. Show all or some of your written notion(s) of default or arbitrary file.
+  2. Write new notions at default or arbitrary file.
+  3. Deleteall or some of your written notion(s) of default or arbitrary file.
 ## How to use:
   first you must clone this repository:
   ```
