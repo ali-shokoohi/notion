@@ -17,7 +17,7 @@ this script doing:
   ```
   cd notion/
   ```
-  and you can see the content of my repository whit `ls`
+  and you can see the content of my repository with `ls`
   now i creat a script 'installer.sh' for do somethings , you can view this file and run it:
   ```
   cat installer.sh #For see content of script
