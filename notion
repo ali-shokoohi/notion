@@ -74,6 +74,7 @@ while repeat:
             print("Can't access '"+Rname+"':No such file or directory!\nNow i open the default file('/home/"+user+"/.notion/notions.txt')")
             Wlist = open('/home/'+user+'/.notion/notions.txt','a')
         Wlist.write(subtitle+" ==> "+content+' ('+from_p+')\n')
+        print("It was written")
         Wlist.close()
     elif do == 'del' or do == 'delete' or do == "Del" or do == "Delete":
         Dname = input('Please enter the name of file notions (Default = "notions.txt" ==> Just press enter!) : ')
