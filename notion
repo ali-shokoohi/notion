@@ -66,8 +66,8 @@ while repeat:
                 if not content:
                     print("Oh! Content of your notion is necessary.")
         from_p = input("Who is this talk? (That person say it 'at first') : ")
-        if not author:
-            author = 'None'
+        if not from_p:
+            from_p = 'None'
         try:
             Wlist = open(Wname,'a')
         except:
@@ -113,3 +113,4 @@ while repeat:
         repeat = True
     else:
         print("Oh sorry! I don't know that you say :( ")
+#https://github.com/ali-shokoohi/
