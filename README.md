@@ -28,5 +28,11 @@ this script doing:
   ```
   ./installer.sh #For run script 
   ```
+  At end of it. you must give it sudo's password for copy notion in directory /bin
+  if you are not in sudo groups you must type `./notion` on shell for use any time.
+  else you can use this command for use this programe any where:
+  ```
+  notion
+  ```
 At the moment this script have several small bugs!
 ### Please help me to development this script :)
