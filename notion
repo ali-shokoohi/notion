@@ -65,7 +65,7 @@ while repeat:
                 content = str(input("Again enter your content of notion : "))
                 if not content:
                     print("Oh! Content of your notion is necessary.")
-        from_p = input("Who is this talk? (That person say it 'at first') : ")
+        from_p = input("Who is this talk? (That person say it 'at first') 'For None just press enter' : ")
         if not from_p:
             from_p = 'None'
         try:
