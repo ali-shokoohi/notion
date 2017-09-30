@@ -105,6 +105,8 @@ while repeat:
             Dlist.write(notion)
         Rlist.close()
         Dlist.close()
+    else:
+        print("Oh sorry. I don't know what you want to do!('Write? Show? Delete?'))
     print("End!")
     repeat = input("Do you want repeat this? (Yes|No) ")
     if repeat == 'No' or repeat == 'no':
