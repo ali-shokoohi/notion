@@ -15,13 +15,13 @@ except:
     print("Please first run 'installer.sh' or run 'installer.sh' again!\nOr you can create '/tmp/.UsernAme' and type your username on '/tmp/.UsernAme'\nBecause file '/tmp/.UsernAme' not found!")
     repeat = False
 while repeat:
-    do = input('What am I doing ? "Write new notion -Show old notion -Delete old notion(s)": ')
+    do = input('What am I doing ? "Write new notion ,Show old notion ,Delete old notion(s)": ')
     if not do:
         print("What! Nothing?!")
         while not do :
-            do = str(input("Tell me what I must do 'Write new notion -Show old notion(s) -Delete old notion(s)': "))
+            do = str(input("Tell me what I must do 'Write new notion ,Show old notion(s) ,Delete old notion(s)': "))
             if not do:
-                print("What are you thing about me!? Look enter a word that you want i do it 'Write new notion -Show old notion -Delete old notion(s)'.")
+                print("What are you thing about me!? Look enter a word that you want i do it 'Write new notion ,Show old notion ,Delete old notion(s)'.")
     if do == 'sh' or do == 'show' or do == 'Sh' or do == 'Show' or do == 'Show old notion' or do == 'Show old notions':
         Rname = input('Please enter the name of file notions (Default = "/home/'+user+'/.notion/notions.txt" ==> Just press enter!) : ')
         if not Rname:
