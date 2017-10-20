@@ -2,6 +2,7 @@
 from os import system
 try:
     ufile = open("/tmp/.UsernAme",'r')
+    repeat = True
 except:
     try:
         system('echo $USER > /tmp/.UsernAme')
@@ -13,7 +14,7 @@ except:
 
 user = ufile.readline()
 user = user[:-1]
-repeat = True
+
 
 print("""Hello!
 
