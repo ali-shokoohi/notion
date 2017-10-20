@@ -1,19 +1,26 @@
 #!/usr/bin/python3
+from os import system
 try:
     ufile = open("/tmp/.UsernAme",'r')
-    user = ufile.readline()
-    user = user[:-1]
-    repeat = True
+except:
+    try:
+        system('echo $USER > /tmp/.UsernAme')
+        ufile = open("/tmp/.UsernAme",'r')
+        repeat = True
+    except:
+        print("Please first run 'installer.sh' or run 'installer.sh' again!\nOr you can create '/tmp/.UsernAme' and type your username on '/tmp/.UsernAme'\nBecause file '/tmp/.UsernAme' not found!")
+        repeat = False
 
-    print("""Hello!
+user = ufile.readline()
+user = user[:-1]
+repeat = True
+
+print("""Hello!
 
         That is a place for keep your notions or thoughts.
         """)
 
-    input("Let's go")
-except:
-    print("Please first run 'installer.sh' or run 'installer.sh' again!\nOr you can create '/tmp/.UsernAme' and type your username on '/tmp/.UsernAme'\nBecause file '/tmp/.UsernAme' not found!")
-    repeat = False
+input("Let's go")
 while repeat:
     do = input('What am I doing ? "Write new notion ,Show old notion ,Delete old notion(s)": ')
     if not do:
